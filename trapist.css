@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+:root {
+  --s: 12s;
+  --p: 12%;
+  --t: 100;
+  --star: #ff4710;
+  --dark: #111;
+}
+
+*, *:before, *:after {
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  font-family: 'Days One', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  position: relative;
+}
+
+
+body:before {
+  content: "";
+  width: 180vmax;
+  height: 180vmax;
+  position: absolute;
+  background: repeating-conic-gradient(#FFF9 0%, transparent .00045%, transparent .0045%, transparent .112345%), linear-gradient(135deg, #2000587d, #2000587d, #000, #9c27b02b);
+  animation: spin 500s linear 0s infinite;
+  z-index: -1;
+  filter: blur(0.65px);
+}
+
+.content {
+  width: 80vmin;
+  height: 80vmin;
+  background: #f000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.75);
+  border-radius: 100%;
+}
+
+.content:hover {
+  cursor: crosshair;
+}
+
+.planet {
+  --c: #ff5110;
+  position: absolute;
+  width: 24vmin;
+  height: 24vmin;
+  /*border: 0.45vmin solid #ffffff05;*/
+  border-radius: 100%;
+  animation: spin var(--speed) linear calc(calc(calc(var(--s) / 4) * 3 ) * -1) infinite;
+  animation: spin var(--speed) linear 2s infinite;
+}
+
+
+.planet:nth-child(1),
+.plan:nth-child(2) {
+  --speed: calc(var(--s) / 24);
+}
+
+.planet:nth-child(2),
+.plan:nth-child(3) {
+  width: 42vmin;
+  height: 42vmin;
+  --speed: calc(var(--s) / 15);
+  --c: #fea70c;
+}
+
+.planet:nth-child(3),
+.plan:nth-child(4) {
+  width: 53vmin;
+  height: 53vmin;
+  --speed: calc(var(--s) / 9);
+  --c: #00c146;
+}
+
+.planet:nth-child(4),
+.plan:nth-child(5) {
+  width: 61vmin;
+  height: 61vmin;
+  --speed: calc(var(--s) / 6);
+  --c: #38c5c2;
+}
+
+.planet:nth-child(5),
+.plan:nth-child(6) {
+  width: 67vmin;
+  height: 67vmin;
+  --speed: calc(var(--s) / 4);
+  --c: #2789b2;
+}
+
+.planet:nth-child(6),
+.plan:nth-child(7) {
+  width: 72vmin;
+  height: 72vmin;
+  --speed: calc(var(--s) / 3);
+  --c: #c14ec9;
+}
+
+.planet:nth-child(7),
+.plan:nth-child(8) {
+  width: 77vmin;
+  height: 77vmin;
+  --speed: calc(var(--s) / 2);
+  --c: #9157e8;
+}
+
+
+.planet:before {
+  content: "";
+  position: absolute;
+  top: -1.25vmin;
+  left: calc(50% - 1vmin);
+  width: 2vmin;
+  height: 2vmin;
+  background: radial-gradient(circle at 50% -30%, #000, #0008, var(--c));
+  border-radius: 100%;
+  box-shadow: 0 0vmin 2vmin 0.5vmin #000, 0 0 1vmin 0 var(--c), 0 0vmin 2vmin 0 var(--c);
+  z-index: 33;
+}
+
+.planet:after {
+  content: "";
+  position: absolute;
+  width: calc(100%);
+  height: calc(100%);
+  border-radius: 100%;
+  /*border: 0.45vmin solid var(--c);
+  border-left-color: #fff0;*/
+  left: -0.45vmin;
+  top: -0.45vmin;
+  transform: rotate(-250deg);
+  filter: blur(1px);
+  /*
+  background: 
+  radial-gradient(circle at 14% 14%, var(--c) 0.2vmin, #fff0 0.45vmin 100%), 
+  radial-gradient(circle at 13.5% 15.25%, var(--c) 0.1vmin, #fff0 0.45vmin 100%),
+  radial-gradient(circle at 12.75% 16.25%, var(--c) 0.1vmin, #fff0 0.35vmin 100%), 
+  radial-gradient(circle at 12.15% 17.1%, var(--c) 0.1vmin, #fff0 0.25vmin 100%);
+  */
+  box-shadow: 0.5vmin 0.5vmin 0.5vmin -0.5vmin var(--c) inset, -0.5vmin -0.5vmin 0.5vmin -0.5vmin var(--c);
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+.planet:nth-child(2):before {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  top: -1.5vmin;
+  left: calc(50% - 1.25vmin);
+}
+
+.planet:nth-child(3):before {
+  width: 3vmin;
+  height: 3vmin;
+  top: -1.75vmin;
+  left: calc(50% - 1.5vmin);
+}
+
+
+
+
+.content:before, .content:after {
+  content: "";
+  position: absolute;
+  width: 4.75vmin;
+  height: 4.75vmin;
+  border-radius: 100%;
+  border: 0.75vmin dotted var(--star);
+  filter: blur(2px);
+  animation: spin var(--s) linear 0s infinite;
+}
+
+.content:after {
+  width: 3.7vmin;
+  height: 3.7vmin;
+  background: var(--star);
+  filter: blur(1px);
+  box-shadow: 0 0 150px 30px var(--star), 0 0 0 1px var(--star);
+}
+
+.content:hover:before,
+.content:hover .planet,
+.content:hover .resonance ,
+.content:hover + .system .plan:before,
+.content:hover + .system .plan:after,
+.content:hover + .system .resonance,
+.content:hover ~ .time:before { 
+  /*--s: 36s;*/
+  animation-play-state: paused;
+}
+
+
+
+.resonance {
+  position: absolute;
+  width: 0.6vmin;
+  height: 60%;
+  background: linear-gradient(0deg, #fff4 90%, #fff0);
+  box-shadow: 0 0 1vmin 0.5vmin #fff5;
+  top: -10%;
+  animation: res var(--s) linear calc(calc(calc(var(--s) / 4) * 3 ) * -1) infinite;
+  animation: res var(--s) linear 2s infinite;
+  pointer-events: none;
+  width: 0.75vmin;
+  background: linear-gradient(0deg, #fff8 90%, #fff0);
+  filter: blur(2px);
+}
+
+@keyframes res {
+  0% { opacity: 1; }
+  1%, 100% { opacity: 0.2; }
+
+
+}
+
+
+@keyframes res-plan {
+  0% { opacity: 1; }
+  20%, 100% { opacity: 0; } 
+}
+
+@keyframes res-num {
+  0% { color: var(--c); }
+  40%, 100% { color: #fff8; } 
+}
+
+.system {
+  display: flex;
+  position: absolute;
+  bottom: calc(50% - 45vmin);
+  /*background: #f002;*/
+  width: 100%;
+  height: 10vmin;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 10vmin;
+}
+
+.system div {
+  border-radius: 100%;
+}
+
+.system .plan {
+  background: radial-gradient(circle at 0 50%, #fff6, #0002);
+  width: 1.5vmin;
+  height: 1.5vmin;
+  opacity: 0.75;
+  /*animation: res-plan var(--speed) linear 2s infinite;*/
+}
+
+.system .plan:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--c);
+  border-radius: 100%;
+  box-shadow: 0 0 1vmin 0 var(--c);
+  /*opacity: 0.5;*/
+  animation: res-plan var(--speed) linear 2s infinite;
+}
+
+.system .plan:nth-child(2) {
+  --c: #ff6600;
+}
+
+.system .plan:nth-child(3) {
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.system .plan:nth-child(4) {
+  width: 2.25vmin;
+  height: 2.25vmin;
+}
+
+.system .star {
+  width: 6vmin;
+  height: 6vmin;
+  --c: var(--star);
+}
+.system .star span {
+  display: block;
+  border-radius: 100%;
+  width: 6vmin;
+  height: 6vmin;
+  background: radial-gradient(circle at 50% 50%, #f00 , var(--star) 2.85vmin, #fff0 2vmin 100%);
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5vmin 0 var(--star),  0 0 5vmin 0 var(--star) inset;
+  animation: spin calc(var(--s) * 8) linear 0s infinite;
+}
+.system .star span:before {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: calc(6vmin + 0.5vmin);
+  height: calc(6vmin + 0.5vmin);
+  border: 0.75vmin dotted var(--star);
+  margin-top: -0.25vmin;
+  margin-left: -0.25vmin;
+  filter: blur(1.5px) drop-shadow(0 0 2px var(--star)) drop-shadow(0 0 5px var(--star));
+
+}
+
+
+.system .star:before {
+  content: "TRAPPIST";
+  color: #fff9;
+  font-size: 1.25vmin;
+  width: 200%;
+  position: absolute;
+  line-height: 6vmin;
+  margin-left: -6vmin;
+  /* font-weight: bold; */
+  content: "STAR";
+}
+
+.system div:after {
+  content: "1A";
+  color: #fff9;
+  color: var(--c);
+  font-size: 1.5vmin;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: -3vmin;
+}
+
+
+.system .plan:after {
+  content: "24\A 1B";
+  white-space: pre;
+  line-height: 6vmin;
+  bottom: -5.5vmin;
+  text-shadow: 0 -1px 0 #000;
+  animation: res-num var(--speed) linear 2s infinite;
+}
+.system .plan:nth-child(3):after {
+  content: "15\A 1C";
+  top: -4.75vmin;
+}
+.system .plan:nth-child(4):after {
+  content: "9\A 1D";top: -4.75vmin;
+}
+.system .plan:nth-child(5):after {
+  content: "6\A 1E";
+}
+.system .plan:nth-child(6):after {
+  content: "4\A 1F";
+}
+.system .plan:nth-child(7):after {
+  content: "3\A 1G";
+}
+.system .plan:nth-child(8):after {
+  content: "2\A 1H";
+}
+.system .plan:nth-child(9):after {
+  content: "ORBITS\A PLANET";
+  font-size: 1.1vmin;
+  text-indent: 0.15em;
+  color: #fff9;
+}
+
+
+.system .plan:nth-child(9) {
+  background: #fff0;;
+}
+
+
+
+.system .resonance {
+  width: 65%;
+  border-radius: 0;
+  top: 4.85vmin;
+  /* margin-left: 0; */
+  height: 0.25vmin;
+  background: linear-gradient(90deg, #fff4 90%, #fff0);
+  z-index: -1;
+  box-shadow: 0 0 0.5vmin 0.25vmin #fff5;
+}
+
+.system .resonance:after {
+  display: none;
+}
+
+#speed {
+  transform: rotate(90deg);
+  width: 50vmin;
+  margin-left: 72vw;
+}
+
+#speed:before {
+  content: "SPEED";
+  color: #fff8;
+  font-size: 1.1vmin;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: -30px;
+}
+
+#speed:after {
+  content: "";
+  width: calc(100% - 5px);
+  height: 4px;
+  background: linear-gradient(90deg, transparent calc(var(--p) * 1), var(--star) calc(var(--p) * 1));
+  position: absolute;
+  top: 5px;
+  z-index: -1;
+}
+
+
+
+
+/*** Range ***/
+
+input[type='range'] {
+  cursor: pointer;
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  background: #fff0;
+  margin: 0;
+  --thumb: #878787;
+  --thumb: radial-gradient(ellipse at 50% 50%, #878787 10px, #fff0 11px ), linear-gradient(0deg, #fff0 0 calc(50% - 3px), #29292988 0 calc(50% + 3px), #fff0 calc(50% + 6px));
+  --br: 0px;
+  --bd: 0px solid #0000;
+  --mbm: difference;
+  --tw: 32px;
+  --th: 32px;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: var(--thumb);
+  width: var(--tw);
+  height: var(--th);
+  border: var(--bd);
+  border-radius: var(--br);
+  margin-top: -13px;
+  mix-blend-mode: var(--mbm);
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: var(--thumb);
+  width: 28px;
+  height: 34px;
+  border: var(--bd);
+  border-radius: var(--br);
+}
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: #fff1;
+  background: linear-gradient(-90deg, #fff2 90%, #fff0);
+  box-shadow: 0 0 1vmin 0.5vmin #fff2;
+  height: 5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+
+input[type=range]::-moz-range-track {
+  background-color: #fff1;
+  box-shadow: 0 0 1vmin 0.5vmin #fff2;
+  height: 5px;
+}
+
+
+
+
+
+
+
+header {
+  position: absolute;
+  margin-top: -90vmin;
+  width: 100%;
+  text-align: center;
+  max-width: 90vmin;
+  z-index: 1;
+}
+
+h1 {
+  color: #fffe;
+  font-weight: normal;
+  font-size: 5vmin;
+  margin-bottom: 1vmin;
+}
+
+
+
+
+
+
+
+.time {
+  position: absolute;
+  width: 4px;
+  height: 50vmin;
+  background: #fff1;
+  margin-left: -72vw;
+  background: linear-gradient(0deg, #fff2 90%, #fff0);
+  box-shadow: 0 0 1vmin 0.5vmin #fff2;
+}
+
+.time:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #fff0 0 50%, #009688 0 100%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  animation: time-to-res calc(var(--s) * 1) linear 2s infinite;
+  counter-reset: ttr var(--t);
+  content: counter(ttr); /*time to resonance*/
+  color: #fff;
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #fff0 0 50%, #009688 0 100%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  content: counter(ttr);
+  color: #fff9;
+  display: flex;
+  text-indent: 2vmin;
+  align-items: flex-end;
+  font-size: 1.5vmin;
+}
+
+
+@property --t {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 100;
+}
+
+@keyframes time-to-res {
+  0% { background-position: 0 100%; --t: 100; } 
+  100% { background-position: 0 0; --t: 0; }  
+}
+
+.time:after {
+  content: "RESONANCE";
+  color: #fff9;
+  font-size: 1.1vmin;
+  position: absolute;
+  text-align: center;
+  bottom: -2.5vmin;
+  margin-left: -3vmin;
+}
+
+
+
+.desc {
+  overflow: hidden;
+  max-height: 0;
+  height: 100vh;
+  position: absolute;
+  color: #fff;
+  transition: all 1s ease 0s;
+  background: linear-gradient(180deg, black, #0000);
+  padding: 0 5vmin;
+  font-size: 2.25vmin;
+  line-height: 3vmin;
+  font-weight: normal;
+  border: 0.3vmin solid #fff;
+  border-radius: 1vmin;
+}
+
+#show-desc:checked + header h1 label {
+  background: #f90;
+}
+
+#show-desc:checked + header .desc {
+  max-height: 72vmin;
+}
+
+#show-desc {
+  display: none;
+}
+
+label[for=show-desc] {
+  width: 6vmin;
+  float: right;
+  cursor: pointer;
+  border-radius: 100%;
+  line-height: 5vmin;
+  font-size: 8vmin;
+  height: 6vmin;
+  background: #fff;
+  color: #040108;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+label[for=show-desc]::before {
+  content: "+";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+#show-desc:checked + header label[for=show-desc]:before {
+  content: "-";
+}
+
+.desc p {
+  margin: 7vmin 2vmin;
+}
+
+.desc a {
+  color: #f90;
+}
+
+.desc p:last-child:before {
+  content: "&";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 5vmin;
+}

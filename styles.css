@@ -1,0 +1,761 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('pexels-anntarazevich-6501751.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-attachment: fixed;  /* Parallax effect: image stays fixed while content scrolls */
+    background-color: #0d0d0d;  /* Fallback color for unsupported browsers */
+    color: #ffffff;  /* Keep text readable */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #050A1B;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #ffa500;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #FF6F61;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.hero {
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #ffa500;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#trappist-1 .trappist-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+#trappist-info {
+    padding: 50px;
+    background-color: #0A0A0A;
+}
+
+#discovery {
+    padding: 50px;
+    background-color: #111;
+}
+
+.trappist-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.trappist-images img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('space-bg.jpg'); /* Add a suitable background */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #ffa500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cta-btn {
+    background-color: #FF6F61;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #FF3B2F;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    border-top: 2px solid #FF6F61;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #CCCCCC;
+}
+
+/* Style for the game container */
+#game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #0A0A0A;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: white;
+}
+
+/* Heading style */
+#game-container h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 36px;
+    color: #FF6F61;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Paragraph style */
+#game-container p {
+    font-size: 18px;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+}
+
+/* Select dropdown styling */
+#planet-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #222;
+    color: #FFFFFF;
+    border: 1px solid #FF6F61;
+    margin-bottom: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Button styling */
+#explore-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #FF6F61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#explore-button:hover {
+    background-color: #FF3B2F;
+}
+
+/* Planet info section */
+#planet-info {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #CCCCCC;
+}
+
+/* Planet info heading */
+#planet-info h2 {
+    font-size: 28px;
+    color: #FF6F61;
+    margin-bottom: 10px;
+}
+
+/* Planet description */
+#planet-info p {
+    font-size: 18px;
+    color: #CCCCCC;
+    margin-bottom: 15px;
+}
+
+/* Image styling */
+#planet-info img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #game-container {
+        padding: 20px;
+    }
+
+    #game-container h1 {
+        font-size: 28px;
+    }
+
+    #planet-info h2 {
+        font-size: 24px;
+    }
+
+    #planet-info p {
+        font-size: 16px;
+    }
+}
+/* Adding a subtle fade-in effect to each section */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.exoplanet-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlighting text */
+.highlight-text {
+    font-weight: bold;
+    color: #ffa500;
+    font-size: 1.2rem;
+}
+.cta-btn {
+    background-color: #FF7F50;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+.cta-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #FF4500;
+    transform: scale(1.05);
+}
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header, section, footer {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .exoplanet-img {
+        max-width: 100%;
+    }
+}
+#hack-an-exoplanet {
+    background-color: #111;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#hack-an-exoplanet h1 {
+    font-size: 2.5rem;
+    color: #ffa500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hack-an-exoplanet iframe {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10s0%;
+  }
+
+/* Make sure the image is centered and responsive */
+.mars-section {
+    position: relative;
+    text-align: center;
+}
+
+.mars-exoplanet-container {
+    position: relative;
+
+    margin-top: -200px; /* Adjust this to move both the image and the section up */
+}
+.centerimg {
+    width: 100%; /* Make it responsive */
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: -150px auto 0 auto;    
+}
+#what-is-exoplanet {
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: Background to improve readability */
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Move the next section up to start from the middle of the image */
+#next-section {
+    margin-top: -500px; /* Adjust this based on where you want it to start */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a background for text readability */
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+
+/* Ensure the image doesn't get overlapped by the footer */
+footer {
+    position: relative;
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    #next-section {
+        margin-top: -300px; /* Less negative margin for smaller screens */
+        padding: 30px 15px;
+    }
+}
+
+/* Main Section */
+#types-of-exoplanet {
+    padding: 60px 20px;
+    background-color: #0A0A0A;
+    text-align: center;
+    color: white;
+}
+
+#types-of-exoplanet h2 {
+    font-size: 3rem;
+    color: #FF7F50;
+    margin-bottom: 30px;
+}
+
+/* Exoplanet Cards */
+.exoplanet-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Card Styles */
+.card {
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: scale(1.1);  /* Slightly enlarge the card */
+    box-shadow: 0 0 25px rgba(255, 127, 80, 0.8);  /* Glowing effect */
+}
+
+/* Icon/Image inside the Card */
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Card Titles */
+.card h3 {
+    font-size: 1.8rem;
+    color: #FF7F50;
+    margin-bottom: 10px;
+}
+
+/* Card Descriptions */
+.card p {
+    font-size: 1.2rem;
+    color: #CCCCCC;
+}
+
+/* Different card background colors */
+.gas-giant {
+    border: 2px solid #FF6F61;
+}
+
+.rocky-planet {
+    border: 2px solid #4CAF50;
+}
+
+.hot-jupiter {
+    border: 2px solid #FF4500;
+}
+
+.ice-giant {
+    border: 2px solid #00BFFF;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .exoplanet-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* General Section Styling */
+#types-of-exoplanet {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460); /* Gradient background */
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Stars */
+#types-of-exoplanet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('stars.png') repeat;  /* Custom starry background */
+    animation: move-stars 100s linear infinite;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+@keyframes move-stars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 10000px 10000px;
+    }
+}
+
+/* Title Styling */
+#types-of-exoplanet h2 {
+    font-family: 'Orbitron', sans-serif;  /* Space-themed font */
+    font-size: 3.5rem;
+    color: #ffa500;  /* Gold color for the title */
+    margin-bottom: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Flip Cards */
+.exoplanet-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.card-container {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;  /* Create 3D space for flip effect */
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: rotateY(180deg);  /* Card flips on hover */
+}
+
+/* Front and Back of the Card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /* Hides the back when front is shown */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+    background-color: #222;
+}
+
+.card-back {
+    background-color: #ff6f61;
+    color: white;
+    transform: rotateY(180deg);  /* Back is rotated initially */
+}
+
+/* Card Images */
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Planet Type Titles */
+.card h3 {
+    font-size: 1.8rem;
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .exoplanet-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* Add an overlay to improve text readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);  /* Dark transparent overlay */
+    z-index: -1;  /* Ensure it stays behind all content */
+}
+.explore-btn {
+    width: 100%; /* Full-width button on mobile */
+    text-align: center; /* Center text in button */
+    text-decoration: none;
+}
+.home-button {
+    display: inline-block;
+    background-color: #ffa500; /* Bright yellow background */
+    color: #000; /* Black text */
+    font-size: 1.8em; /* Large font size */
+    padding: 15px 30px; /* Padding for size and space */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transition effect */
+}
+
+.home-button:hover {
+    background-color: #4dc4ff; /* Change to blue when hovered */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
+nav ul li {
+    position: relative;  /* Ensure dropdown is positioned relative to the parent */
+}
+
+nav ul li ul.dropdown {
+    display: none;  /* Hide dropdown by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;  /* Dropdown background color */
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;  /* Ensure dropdown is above other content */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;  /* Show dropdown on hover */
+}
+
+nav ul li ul.dropdown li {
+    margin: 0;
+}
+
+nav ul li ul.dropdown li a {
+    color: #fff;  /* Dropdown link color */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    background-color: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li ul.dropdown li a:hover {
+    background-color: #555;  /* Change background on hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.video-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-description {
+    margin-top: 20px;
+}
+
+.video-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.video-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}

@@ -1,0 +1,18 @@
+<div>
+    <header>
+        <h1>Meet the Neighbors</h1>
+        <h3>Exoplanet Distance Heat Map</h3>
+      </header>
+      <main ng-app="KeplerApp" ng-controller="MainController">
+        <div id="key">
+          <h5>Distance from earth in parsecs</h5>
+          <ul>
+            <li class="key-item" ng-repeat="item in key">
+              <div class="key-color" style="background-color:{{item.color}};"></div>
+              <p class="key-label">{{item.threshold}}</p>
+            </li>
+          </ul>
+        </div>
+        <div id="graph"></div>
+      </main>
+</div>

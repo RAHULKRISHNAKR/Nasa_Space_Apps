@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Exoplanet Explorer</h1>
+        <p>Choose a planet to explore:</p>
+        <select id="planet-select">
+          <option value="">Select a planet</option>
+          <option value="kepler-62f">Kepler-62f</option>
+          <option value="proxima-b">Proxima b</option>
+          <option value="trappist-1e">TRAPPIST-1e</option>
+          <option value="HD-189733-b">HD 189733 b</option>
+          <option value="51-Pegasi-b">51 Pegasi b</option>
+          <option value="WASP-12b">WASP-12b</option>
+
+
+
+        </select>
+        <button id="explore-button">Explore</button>
+        <div id="planet-info"></div>
+    </div>
+    <footer>
+      <a href="index.html" class="home-button">🏠 Home</a>
+      <p>&copy; 2024 Cyber_Knights. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+<script>
+    const planetSelect = document.getElementById("planet-select");
+    const exploreButton = document.getElementById("explore-button");
+    const planetInfoDiv = document.getElementById("planet-info");
+
+    const planets = {
+      "kepler-62f": {
+        name: "Kepler-62f",
+        description: "A potentially habitable exoplanet located 1,200 light-years from Earth.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/Kepler-62_f"
+      },
+      "proxima-b": {
+        name: "Proxima b",
+        description: "A potentially habitable exoplanet located 4.2 light-years from Earth.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/Proxima_Cen_b"
+      },
+      "trappist-1e": {
+        name: "TRAPPIST-1e",
+        description: "One of seven Earth-sized planets orbiting the ultracool dwarf star TRAPPIST-1.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/TRAPPIST-1_e"
+      },
+      "HD-189733-b": {
+        name: "HD 189733 b",
+        description: "Known for its deep blue color, it’s a gas giant where it might rain molten glass due to extreme weather conditions.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/HD_189733_b"
+      },
+      "51-Pegasi-b": {
+        name: "51 Pegasi b",
+        description: "The first exoplanet discovered around a Sun-like star, it’s a gas giant located 50 light-years away.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/51_Peg_b"
+      },
+      "WASP-12b": {
+        name: "WASP-12b",
+        description: "A hot Jupiter 1,400 light-years away, it’s so close to its star that its atmosphere is being stripped away.",
+        website: "https://eyes.nasa.gov/apps/exo/#/planet/Proxima_Cen_b"
+      },
+    };
+
+    exploreButton.addEventListener("click", () => {
+      const selectedPlanet = planetSelect.value;
+      if (selectedPlanet) {
+        const planetData = planets[selectedPlanet];
+        planetInfoDiv.innerHTML = `
+          <h2>${planetData.name}</h2>
+          <p>${planetData.description}</p>
+          <iframe src="${planetData.website}" width="400" height="400"></iframe>
+        `;
+      } else {
+        planetInfoDiv.innerHTML = "Please select a planet to explore.";
+      }
+    });
+</script>

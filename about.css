@@ -1,0 +1,188 @@
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for kids */
+    background-image: url('https://media1.giphy.com/media/iicDrNGWxHmDrIni6j/200.webp?cid=ecf05e47tbfawj69uw6gnkn91iogx6idmebns3qygdywuza8&ep=v1_gifs_search&rid=200.webp&ct=g'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 4em; /* Larger font for the main heading */
+    color: #ffcc00; /* Bright yellow for visibility */
+}
+
+h2 {
+    color: #ffcc00; 
+    font-size: 3em; /* Larger font for subheadings */
+    text-align: center; /* Center the headings */
+}
+
+h3 {
+    color: #4dc4ff; /* Bright blue for sub-sections */
+    font-size: 2em; /* Size for sub-sections */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.flex-container img {
+    width: 100%; /* Responsive image */
+    max-width: 300px; /* Limit size for better appearance */
+    border: 5px solid #ffcc00; /* Border around images for emphasis */
+    border-radius: 15px; /* Rounded corners for images */
+}
+
+
+.exoplanet-img {
+    width: 350px; 
+    height: auto;
+    margin-right: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.exoplanet-img:hover {
+    transform: scale(1.05); /* Scale up on hover for a nice effect */
+}
+
+p {
+    line-height: 1.8; 
+    font-size: 1.5em; 
+    margin: 0; 
+    color: #f0f0f0; 
+    text-align: justify; /* Justify text for better readability */
+}
+.discovery-methods {
+    display: flex;
+    flex-direction: column; /* Stack methods vertically */
+    margin-top: 20px;
+}
+
+.method {
+    display: flex; /* Align icon and content side by side */
+    align-items: flex-start; /* Align items to the start */
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding for content */
+    margin: 10px 0; /* Space between methods */
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.method:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.method-icon {
+    font-size: 2.5em; /* Increase icon size */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.method-title {
+    color: #ffcc00; /* Gold color for method titles */
+    font-size: 1.8em; /* Increase font size */
+    margin-bottom: 5px; /* Space below the title */
+}
+
+.method-content p {
+    line-height: 1.6; /* Improved readability */
+    font-size: 1.2em; /* Increased font size */
+    margin: 0; /* Remove default margin */
+    color: #f0f0f0; /* Light text color */
+}
+
+
+.method-title {
+    color: #ffcc00; 
+    font-weight: bold; 
+    font-size: 1.3em; 
+}
+
+footer {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1em; 
+    color: #cccccc;
+}
+
+.explore-btn {
+    display: inline-block; 
+    background-color: #4dc4ff;
+    color: #fff;
+    padding: 12px 24px; 
+    text-decoration: none;
+    border-radius: 25px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 20px 0; /* Space below the button */
+    font-size: 1.2em; /* Slightly larger font for button */
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+.explore-btn:hover {
+    background-color: #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3em; 
+    }
+
+    h2 {
+        font-size: 2.5em; 
+    }
+
+    .flex-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .exoplanet-img {
+        width: 100%; /* Full-width images on mobile */
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+
+    p {
+        font-size: 1.2em; 
+    }
+
+    .explore-btn {
+        width: 100%; /* Full-width button on mobile */
+        text-align: center; /* Center text in button */
+    }
+}
+.home-button {
+    display: inline-block;
+    background-color: #ffa500; /* Bright yellow background */
+    color: #000; /* Black text */
+    font-size: 1em; /* Large font size */
+    padding: 10px 20px; /* Padding for size and space */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transition effect */
+}
+
+.home-button:hover {
+    background-color: #4dc4ff; /* Change to blue when hovered */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+

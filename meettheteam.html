@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team</title>
+    <link rel="stylesheet" href="team.css">
+    <script defer src="team.js"></script>
+</head>
+<body>
+    <section class="team-section">
+        <h1>Meet the Team</h1>
+        <div class="team-container">
+            <div class="team-member" data-id="1">
+                <h2>John Doe</h2>
+                <p>Lead Developer</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+            <div class="team-member" data-id="2">
+                <h2>Jane Smith</h2>
+                <p>UI/UX Designer</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+            <div class="team-member" data-id="3">
+                <h2>Alex Johnson</h2>
+                <p>Data Scientist</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+            <div class="team-member" data-id="4">
+                <h2>Sara Williams</h2>
+                <p>Project Manager</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+            <div class="team-member" data-id="5">
+                <h2>Chris Lee</h2>
+                <p>QA Engineer</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+            <div class="team-member" data-id="6">
+                <h2>Emma Brown</h2>
+                <p>Marketing Specialist</p>
+                <div class="overlay">
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for detailed team member information -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-name"></h2>
+                <p id="modal-role"></p>
+                <p id="modal-bio"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

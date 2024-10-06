@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    background-image: url('2.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #f2e8f4;
+    margin-bottom: 20px;
+}
+
+.flashcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back when front is visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.6s; /* Smooth rotation */
+}
+
+.front {
+    background-color: #d9e8dc; /* Front color */
+}
+
+.back {
+    transform: rotateY(180deg); /* Hide back initially */
+    background-color: #cdc089; /* Green background for the back */
+    color: white;
+}
+
+.text {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg); /* Rotate front to hide */
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg); /* Show back */
+}
+
+.front{
+    background-image: url('1.jpg' );
+    background-size:contain;
+    
+
+}
+
+.front .text{
+    color: #000000;
+    background-color: #cdc089;
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #ffa500; /* Bright yellow background */
+    color: #000; /* Black text */
+    font-size: 1.8em; /* Large font size */
+    padding: 15px 30px; /* Padding for size and space */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transition effect */
+}
+
+.home-button:hover {
+    background-color: #4dc4ff; /* Change to blue when hovered */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
+html, body {
+    height: 100%; /* Ensure body takes full height */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Makes sure content pushes the footer down */
+}
+
+footer {
+    position: relative; /* Normal positioning */
+    bottom: 0;
+}
+
