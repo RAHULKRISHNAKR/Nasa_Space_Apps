@@ -1,7 +1,6 @@
 # NASA Space Apps Challenge 2024 - EXOPLANET EXPLORER
 
 <img width=400px href = "banner-18.jpg">
-![NASA Space Apps Challenge](banner-18.jpg)
 
 ## Project Overview
 
