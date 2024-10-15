@@ -1,6 +1,7 @@
 # NASA Space Apps Challenge 2024 - EXOPLANET EXPLORER
 
-![NASA Space Apps Challenge](https://www.nasa.gov/sites/default/files/thumbnails/image/spaceapps2020_graphic.jpg)
+<img width=400px href = "banner-18.jpg">
+![NASA Space Apps Challenge](banner-18.jpg)
 
 ## Project Overview
 
