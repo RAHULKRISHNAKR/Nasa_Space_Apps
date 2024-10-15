@@ -10,7 +10,7 @@ Visit our final website: [Project Website](https://rahulkrishnakr.github.io/Nasa
 
 ## Problem Statement
 
-[Chronicles Of Exoplanet Exploration].(https://www.spaceappschallenge.org/nasa-space-apps-2024/challenges/chronicles-of-exoplanet-exploration/)
+[Chronicles Of Exoplanet Exploration](https://www.spaceappschallenge.org/nasa-space-apps-2024/challenges/chronicles-of-exoplanet-exploration/)
 
 ## Solution
 
